@@ -8,10 +8,20 @@ export default function formatNumber(number, option) {
   // * Please implement the function and pass all the tests in format_number_spec.js.
   // * Please do NOT modify the signature of the function.
   var numberString = 'string';
-  if (option == null) {
-    numberString = number.toFixed(2).toString();
-  } else {
-    numberString = '$ ' + number.toFixed(2).toString(); 
+  for (let currency in option){
+    if(option.currency == true){
+      numberString = '$ ' + number.toFixed(2);
+      return numberString;    
+    }        
   }
-  return numberString;
+  numberString = number.toFixed(2);
+  return numberString;       //为空
+  
+  //option.currency = false;
+  // if (option == null) {
+  //   numberString = number.toFixed(2);
+  // } else{
+  //   numberString = '$ ' + number.toFixed(2); 
+  // }
+  //return numberString;
 }

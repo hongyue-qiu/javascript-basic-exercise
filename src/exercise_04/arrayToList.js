@@ -7,12 +7,38 @@ export default function arrayToList(array) {
   // * Please do NOT modify the signature of the function.
   if(array == null) throw 'Creating list from undefined array';
   if(array.length == 0) throw 'Creating list from empty array';
-  if(array.length > 0){
-    array.value = array[0];
-    //if(array.length == 1) array.next = null;
-    // if(array.length == 2) {array.next.value = array[1];array.next.next = null}
-    // if(array.length == 3) {array.next.value = array[1];array.next.next.value = array[2];array.next.next.next = null;}
-  }
+  function List(next,value){
+    next = next;
+    value = value;
   
+  }
+
+  var list = new List();
+  var list2 = new Object();
+  var list3 = new Object();
+
+  //list.next = null;
+  //list.value = array[0];
+  
+  if(array.length > 0){
+    list.value = array[0];
+    if(array.length == 1) {list.next = null; }
+    if(array.length == 2) {
+      list2.value = array[1];
+      list2.next = null;
+      list.next = list2;
+      
+    }
+   if(array.length == 3) {
+    list2.value = array[1];
+    list3.next = null;
+    list3.value = array[2];
+    list2.next = list3;
+    list.next = list2;
+
+   }
+   }
+ 
+  return list;
 
 }

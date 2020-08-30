@@ -14,6 +14,17 @@ export default function countCharacter(string, prediction) {
       num = 2;
     }
   }
+  // if(string == null) num = 0;
+  // if(string != null && prediction == null){
+  //   num = string.toString().length;
+  // }else{
+  //   var num2 = string.toString().length;
+  //   for(let i =0; i < num2;i++){
+  //     if(string[i] == 'l') num++;
+  //   }
+  // }
+  
+  //if(prediction == 'l') num=2;
   
   return num;
 }
