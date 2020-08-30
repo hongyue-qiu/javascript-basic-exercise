@@ -7,12 +7,11 @@ export default function arrayToList(array) {
   // * Please do NOT modify the signature of the function.
   if(array == null) throw 'Creating list from undefined array';
   if(array.length == 0) throw 'Creating list from empty array';
-  function List(next,value){
-    next = next;
-    value = value;
-  
-  }
 
+  function List(value,next){
+    value = value;
+    next = next;    
+  }
   var list = new List();
   var list2 = new Object();
   var list3 = new Object();
